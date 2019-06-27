@@ -31,7 +31,8 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'scrooloose/nerdtree'
 Plugin 'mileszs/ack.vim'
 Plugin 'ngmy/vim-rubocop'
-Plugin 'takac/vim-hardtime'
+Plugin 'elixir-editors/vim-elixir'
+" Plugin 'takac/vim-hardtime'
 
 " Colors
 Plugin 'nanotech/jellybeans.vim'
@@ -40,6 +41,7 @@ Plugin 'nanotech/jellybeans.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+set noswapfile
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set history=500		" keep 500 lines of command line history
 set ruler		" show the cursor position all the time
@@ -98,6 +100,9 @@ autocmd vimenter * NERDTree
 let g:ackprg = 'ag --nogroup --nocolor --column'
 let g:vimrubocop_keymap = 0
 let g:hardtime_default_on = 1
+" FOR COLORS
+let &t_Co=256
+syntax enable
 
 let mapleader = ","
 
